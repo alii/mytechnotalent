@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Open+Sans&display=swap');
 
 body {
-	@apply font-sans;
+	@apply font-mono;
 
 	background: url('//source.unsplash.com/8xznAGy4HcY/1920x1080') no-repeat center bottom fixed;
 	background-size: cover;

@@ -6,7 +6,7 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			...defaultTheme.fontFamily,
-			serif: ['Cormorant Garamond', ...defaultTheme.fontFamily.serif],
+			mono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono],
 			sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
 		},
 		extend: {},

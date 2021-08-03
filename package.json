@@ -5,11 +5,13 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"start": "next start"
+		"start": "next start",
+		"export": "next export"
 	},
 	"dependencies": {
 		"framer-motion": "^4.1.17",
-		"next": "^11.0.2-canary.24",
+		"gsap": "^3.7.1",
+		"next": "^11.0.2-canary.25",
 		"react": "17.0.2",
 		"react-dom": "17.0.2"
 	},

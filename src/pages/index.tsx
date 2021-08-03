@@ -1,4 +1,5 @@
-import {motion} from 'framer-motion';
+import {motion, MotionValue} from 'framer-motion';
+import {createContext, useContext} from 'react';
 import {Down} from '../components/icons';
 
 const mapper = (text: string) =>
@@ -17,7 +18,7 @@ export default function Home() {
 		<div className="h-screen bg-black bg-opacity-80 text-white flex justify-center items-center">
 			<div>
 				<motion.h3
-					className="text-center font-serif text-5xl"
+					className="text-center font-mono text-5xl"
 					variants={{
 						hidden: {opacity: 1},
 						visible: {opacity: 1, transition: {staggerChildren: 0.18}},
@@ -25,9 +26,7 @@ export default function Home() {
 					initial="hidden"
 					animate="visible"
 				>
-					{mapper('Kevin')}
-					<br />
-					{mapper('Thomas')}
+					{mapper('Kevin')} {mapper('Thomas')}
 				</motion.h3>
 				<motion.div
 					className="flex justify-center mt-5 animate-pulse"
