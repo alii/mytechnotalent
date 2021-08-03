@@ -1,13 +1,13 @@
-const {fontFamily} = require('tailwindcss/defaultTheme');
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
 	purge: ['src/**/*.{ts,tsx}'],
 	darkMode: false,
 	theme: {
 		fontFamily: {
-			...fontFamily,
-			serif: ['Cormorant Garamond', 'sans-serif'],
-			sans: ['Open Sans', 'sans-serif'],
+			...defaultTheme.fontFamily,
+			serif: ['Cormorant Garamond', ...defaultTheme.fontFamily.serif],
+			sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
 		},
 		extend: {},
 	},

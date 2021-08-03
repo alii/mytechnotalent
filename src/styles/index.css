@@ -2,4 +2,7 @@
 
 body {
 	@apply font-sans;
+
+	background: url('//source.unsplash.com/8xznAGy4HcY/1920x1080') no-repeat center bottom fixed;
+	background-size: cover;
 }
