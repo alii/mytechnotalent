@@ -82,8 +82,12 @@ export default function Home() {
 				</motion.div>
 			</motion.div>
 
-			<div className="p-2 m-5 bg-black bg-opacity-80 h-full flex-1 overflow-y-auto">
-				<h1>courses</h1>
+			<div className="p-10 flex flex-1 h-full">
+				<div className="bg-black bg-opacity-60 border-white border border-opacity-10 overflow-y-auto w-full rounded-xl p-10">
+					<h1 className="text-xl">
+						courses <span className="opacity-50">– re, c[++], web</span>
+					</h1>
+				</div>
 			</div>
 		</div>
 	);
