@@ -1,5 +1,4 @@
 import {motion} from 'framer-motion';
-import {Down} from '../components/icons';
 
 function getY() {
 	const mult = 100;
@@ -53,7 +52,7 @@ export default function Home() {
 						visible: {opacity: 1, y: 0},
 					}}
 				>
-					<Down />
+					software engineer
 				</motion.div>
 			</motion.div>
 		</div>
