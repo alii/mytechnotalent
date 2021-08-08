@@ -1,4 +1,5 @@
 import {motion} from 'framer-motion';
+import {Down} from '../components/icons';
 
 function getY() {
 	const mult = 100;
@@ -27,8 +28,9 @@ const mapper = (text: string) =>
 
 export default function Home() {
 	return (
-		<div className="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-80 text-white flex justify-center items-center">
+		<div className="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-80 text-white flex items-center space-x-10">
 			<motion.div
+				className="flex-1 flex flex-col items-center"
 				transition={{
 					staggerChildren: 2,
 				}}
@@ -39,7 +41,12 @@ export default function Home() {
 					className="text-center font-mono text-5xl"
 					variants={{
 						hidden: {opacity: 1},
-						visible: {opacity: 1, transition: {staggerChildren: 0.18}},
+						visible: {
+							opacity: 1,
+							transition: {
+								staggerChildren: 0.18,
+							},
+						},
 					}}
 				>
 					{mapper('Kevin')} {mapper('Thomas')}
@@ -54,7 +61,30 @@ export default function Home() {
 				>
 					software engineer
 				</motion.div>
+
+				<motion.div
+					className="mt-10 w-36"
+					variants={{
+						hidden: {opacity: 0, y: -5},
+						visible: {opacity: 1, y: 0},
+					}}
+				>
+					<div className="grid grid-cols-4 place-items-center gap-5">
+						<Down />
+						<Down />
+						<Down />
+						<Down />
+						<Down />
+						<Down />
+						<Down />
+						<Down />
+					</div>
+				</motion.div>
 			</motion.div>
+
+			<div className="p-2 m-5 bg-black bg-opacity-80 h-full flex-1 overflow-y-auto">
+				<h1>courses</h1>
+			</div>
 		</div>
 	);
 }
