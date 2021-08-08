@@ -1,4 +1,5 @@
 import {motion} from 'framer-motion';
+import {ReactNode} from 'react';
 import {Down} from '../components/icons';
 
 function getY() {
@@ -63,22 +64,21 @@ export default function Home() {
 				</motion.div>
 
 				<motion.div
-					className="mt-10 w-36"
-					variants={{
-						hidden: {opacity: 0, y: -5},
-						visible: {opacity: 1, y: 0},
+					className="mt-10 w-36 grid grid-cols-4 place-items-center gap-5"
+					transition={{
+						staggerChildren: 0.2,
 					}}
+					initial="hidden"
+					animate="visible"
 				>
-					<div className="grid grid-cols-4 place-items-center gap-5">
-						<Down />
-						<Down />
-						<Down />
-						<Down />
-						<Down />
-						<Down />
-						<Down />
-						<Down />
-					</div>
+					<AnimatedLink icon={<Down />} href="" />
+					<AnimatedLink icon={<Down />} href="" />
+					<AnimatedLink icon={<Down />} href="" />
+					<AnimatedLink icon={<Down />} href="" />
+					<AnimatedLink icon={<Down />} href="" />
+					<AnimatedLink icon={<Down />} href="" />
+					<AnimatedLink icon={<Down />} href="" />
+					<AnimatedLink icon={<Down />} href="" />
 				</motion.div>
 			</motion.div>
 
@@ -90,5 +90,19 @@ export default function Home() {
 				</div>
 			</div>
 		</div>
+	);
+}
+
+function AnimatedLink(props: {icon: ReactNode; href: string}) {
+	return (
+		<motion.a
+			variants={{
+				hidden: {opacity: 0, y: -5},
+				visible: {opacity: 1, y: 0},
+			}}
+			href={props.href}
+		>
+			{props.icon}
+		</motion.a>
 	);
 }
