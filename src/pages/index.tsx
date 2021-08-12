@@ -3,7 +3,7 @@ import {ReactNode} from 'react';
 import {Down} from '../components/icons';
 
 function getY() {
-	const mult = 100;
+	const mult = 300;
 	const rand = Math.random();
 
 	if (rand > 0.5) {
@@ -82,13 +82,15 @@ export default function Home() {
 				</motion.div>
 			</motion.div>
 
-			<div className="p-10 flex flex-1 h-full">
-				<div className="bg-black bg-opacity-60 border-white border border-opacity-10 overflow-y-auto w-full rounded-xl p-10">
-					<h1 className="text-xl">
-						courses <span className="opacity-50">– re, c[++], web</span>
-					</h1>
+			<motion.div transition={{delay: 2}} initial={{width: '0%'}} animate={{width: '50%'}}>
+				<div className="p-10 flex flex-1 h-full overflow-x-hidden">
+					<div className="bg-black bg-opacity-60 border-white border border-opacity-10 overflow-y-auto w-full rounded-xl p-10">
+						<h1 className="text-xl">
+							courses <span className="opacity-50">– re, c[++], web</span>
+						</h1>
+					</div>
 				</div>
-			</div>
+			</motion.div>
 		</div>
 	);
 }
