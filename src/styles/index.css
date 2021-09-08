@@ -1,5 +1,6 @@
 body {
 	@apply overflow-hidden;
+
 	font-family: Arial, Helvetica, sans-serif;
 	background: #008080;
 }
