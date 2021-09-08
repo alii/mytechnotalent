@@ -28,7 +28,7 @@ export default function Index() {
 					<Win98Flag className="h-4 w-4 inline" />
 					<span className="inline">Start</span>
 				</button>
-				<button type="button" onClick={toggle} className="text-sm">
+				<button type="button" className="text-sm" onClick={toggle}>
 					{flicker ? 'disable' : 'enable'} flicker
 				</button>
 			</div>
