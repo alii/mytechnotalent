@@ -16,6 +16,7 @@ module.exports = {
 		'react/function-component-definition': 'off',
 		'react/react-in-jsx-scope': 'off',
 		'react/jsx-tag-spacing': 'off',
+		'operator-linebreak': 'off',
 	},
 	ignorePatterns: ['dist', '**/*.cjs', '**/*.js'],
 };

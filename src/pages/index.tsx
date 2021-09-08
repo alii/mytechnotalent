@@ -1,4 +1,16 @@
-export default function Page() {
+import {useRouter} from 'next/router';
+
+export default function Index() {
+	const router = useRouter();
+
+	const seen =
+		typeof window === 'undefined' ? false : window.localStorage.getItem('seen');
+
+	if (!seen) {
+		void router.push('/warning');
+		return null;
+	}
+
 	return (
 		<div className="flicker bg-teal overflow-hidden rounded-md h-full flex flex-col">
 			<div className="flex-1 p-3">

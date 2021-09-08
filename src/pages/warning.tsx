@@ -1,6 +1,9 @@
+import {useRouter} from 'next/router';
 import Link from 'next/link';
 
 export default function Warning() {
+	const router = useRouter();
+
 	return (
 		<div className="bg-teal h-full p-10 rounded-md">
 			<h1 className="text-3xl">Kevin Thomas</h1>
