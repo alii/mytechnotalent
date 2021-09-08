@@ -1,8 +1,10 @@
 import {useRouter} from 'next/router';
+import {useReducer} from 'react';
 import {Win98Flag} from '../components/icons';
 
 export default function Index() {
 	const router = useRouter();
+	const [flicker, toggle] = useReducer(x => !x, true);
 
 	const seen =
 		typeof window === 'undefined' ? false : window.localStorage.getItem('seen');
@@ -16,7 +18,11 @@ export default function Index() {
 	}
 
 	return (
-		<div className="flicker bg-teal overflow-hidden rounded-md h-full flex flex-col">
+		<div
+			className={`${
+				flicker ? 'flicker' : ''
+			} border-2 border-timberwolf-700 relative bg-teal overflow-hidden rounded-md h-full flex flex-col`}
+		>
 			<div className="flex-1 p-4 text-right text-shadow space-y-3">
 				<div>
 					<h1 className="text-2xl">Kevin Thomas</h1>
@@ -34,6 +40,9 @@ export default function Index() {
 				>
 					<Win98Flag className="h-4 w-4 inline" />
 					<span className="inline">Start</span>
+				</button>
+				<button type="button" onClick={toggle} className="text-sm">
+					{flicker ? 'disable' : 'enable'} flicker
 				</button>
 			</div>
 		</div>
