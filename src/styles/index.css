@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Open+Sans&display=swap');
-
 body {
-	@apply font-mono overflow-hidden;
-
-	background: url('//source.unsplash.com/8xznAGy4HcY/1920x1080') no-repeat center bottom fixed;
-	background-size: cover;
+	@apply overflow-hidden;
+	font-family: Arial, Helvetica, sans-serif;
+	background: #008080;
 }
