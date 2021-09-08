@@ -1,6 +1,6 @@
 export default function Page() {
 	return (
-		<div className="h-full flex flex-col">
+		<div className="flicker bg-teal overflow-hidden rounded-md h-full flex flex-col">
 			<div className="flex-1 p-3">
 				<h1>Kevin Thomas</h1>
 			</div>
