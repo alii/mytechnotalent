@@ -15,7 +15,7 @@ function getY() {
 
 const mapper = (text: string) =>
 	text.split('').map((char, index) => (
-		<motion.span 
+		<motion.span
 			key={`${char}-${index.toString()}`}
 			className="inline-block"
 			variants={{
