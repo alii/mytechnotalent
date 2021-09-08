@@ -1,21 +1,8 @@
-import {useRouter} from 'next/router';
 import {useReducer} from 'react';
 import {Win98Flag} from '../components/icons';
 
 export default function Index() {
-	const router = useRouter();
-	const [flicker, toggle] = useReducer(x => !x, true);
-
-	const seen =
-		typeof window === 'undefined' ? false : window.localStorage.getItem('seen');
-
-	if (!seen) {
-		if (typeof window !== 'undefined') {
-			void router.push('/warning');
-		}
-
-		return null;
-	}
+	const [flicker, toggle] = useReducer(x => !x, false);
 
 	return (
 		<div
