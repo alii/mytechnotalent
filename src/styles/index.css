@@ -8,73 +8,97 @@ button {
 }
 
 .text-shadow {
-	text-shadow: rgba(0, 0, 0, 0.5) 0 0 5px;
+	text-shadow: rgba(255, 255, 255, 0.5) 0 0 1px;
 }
 
 @keyframes flicker {
 	0% {
 		opacity: 0.78271;
 	}
+
 	5% {
 		opacity: 0.49714;
 	}
+
 	10% {
 		opacity: 0.65987;
 	}
+
 	15% {
 		opacity: 0.40952;
 	}
+
 	20% {
 		opacity: 0.85694;
 	}
+
 	25% {
 		opacity: 0.43954;
 	}
+
 	30% {
 		opacity: 0.82286;
 	}
+
 	35% {
 		opacity: 0.79415;
 	}
+
 	40% {
 		opacity: 0.04173;
 	}
+
 	45% {
 		opacity: 0.91767;
 	}
+
 	50% {
 		opacity: 0.47977;
 	}
+
 	55% {
 		opacity: 0.05509;
 	}
+
 	60% {
 		opacity: 0.91005;
 	}
+
 	65% {
 		opacity: 0.8232;
 	}
+
 	70% {
 		opacity: 0.37117;
 	}
+
 	75% {
 		opacity: 0.52455;
 	}
+
 	80% {
 		opacity: 0.14418;
 	}
+
 	85% {
 		opacity: 0.06391;
 	}
+
 	90% {
 		opacity: 0.97701;
 	}
+
 	95% {
 		opacity: 0.08852;
 	}
+
 	100% {
 		opacity: 0.62635;
 	}
+}
+
+.flicker > * {
+	z-index: 0;
 }
 
 .flicker::after {
@@ -87,7 +111,7 @@ button {
 	right: 0;
 	background: rgba(18, 16, 16, 0.01);
 	opacity: 0;
-	z-index: 2;
+	z-index: 10;
 	pointer-events: none;
 }
 
@@ -106,7 +130,7 @@ button {
 			rgba(0, 255, 0, 0.02),
 			rgba(0, 0, 255, 0.06)
 		);
-	z-index: 2;
+	z-index: 10;
 	background-size: 100% 2px, 3px 100%;
 	pointer-events: none;
 	animation: flicker 1s infinite;
