@@ -15,8 +15,6 @@ export default function Index() {
 			.getBattery()
 			.then(battery => battery.level * 100);
 
-		console.log(battery);
-
 		return battery;
 	});
 
